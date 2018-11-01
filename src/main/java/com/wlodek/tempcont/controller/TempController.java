@@ -16,9 +16,10 @@ public class TempController {
 
 
     @PostMapping("/addTemperature")
-    public String show(@RequestParam String tempReading,ModelMap map){
+    public String show (@RequestParam String tempReading,ModelMap map){
             Temp temp = new Temp(tempReading);
             map.put("tempReading",temp);
+     //   System.out.println(test);
 
         return "showTemperature";
     }
